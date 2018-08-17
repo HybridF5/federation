@@ -31,7 +31,7 @@ SAMLResponse = mp.getSAML()
 
 headers = {"Content-Type": "application/x-www-form-urlencoded",
            "X-Idp-Id": "@ALLY_HUAWEICLOUD"}
-response = requests.post("", headers=headers,
+response = requests.post("https://ocbiam.inhuawei.com:31943/v3.0/OS-FEDERATION/tokens", headers=headers,
                          data={"SAMLResponse": SAMLResponse},
 						 verify=False)
 
